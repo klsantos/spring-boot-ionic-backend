@@ -16,10 +16,6 @@ public class CategoriaDTO implements Serializable{
 	@Length(min=5, max=120, message="O tamanho deve ser entre 5 e 120 caracteres")
 	private String nome;
 	
-	@NotEmpty(message="Preenchimento obrigatório")
-	@Email(message="Email inválido")
-	private String email;
-	
 	
 	public CategoriaDTO() {
 	}
@@ -45,13 +41,4 @@ public class CategoriaDTO implements Serializable{
 		this.nome = nome;
 	}
 	
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	
-
 }
