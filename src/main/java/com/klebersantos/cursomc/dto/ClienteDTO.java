@@ -2,11 +2,13 @@ package com.klebersantos.cursomc.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
 
 import com.klebersantos.cursomc.domain.Cliente;
+
 
 public class ClienteDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -16,6 +18,9 @@ public class ClienteDTO implements Serializable{
 	@NotEmpty(message="Preenchimento obrigatório")
 	@Length(min=5)
 	private String nome;
+	
+	@NotEmpty(message="Preenchimento obrigatório")
+	@Email(message="Email inválido")
 	private String email;
 	
 	public ClienteDTO() {
